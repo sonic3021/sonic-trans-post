@@ -3,11 +3,15 @@ package cmd
 import (
 	"fmt"
 	"os"
+	_ "path/filepath"
+	_ "strings"
 
 	"github.com/spf13/cobra"
+	"github.com/sonic3021/sonic-trans-post/config"
 )
 
 var cfgFile string
+var conf=config.Config()
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -34,7 +38,17 @@ func Execute() {
 }
 
 func init() {
+
+
+
+
+
+
+
+
+
 	cobra.OnInitialize()
+
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
